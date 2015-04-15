@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Gestion des personnels</title>
+		<meta name="description" content="Responsive Animated Border Menus with CSS Transitions" />
+		<meta name="keywords" content="navigation, menu, responsive, border, overlay, css transition" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style5.css" />
+		<script src="/js/modernizr.custom.js"></script>
+		
+	</head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<h1>Modification de l'employee <%=employe.nom%></h1>
+				
+				<form action="/collaborateurs" method="post">
+					<input type="hidden" name="id" value="<%=employe._id%>">
+					Name:<br>
+					<input type="text" name="nom" value="<%=employe.nom%>">
+					<br>
+					Forname:<br>
+					<input type="text" name="prenom" value="<%=employe.prenom%>">
+					<br>
+					Date de naissance:<br>
+					<input type="text" name="naissance" value="<%=employe.naissance%>" >
+					<br>
+					Poste:<br>
+					<input type="text" name="poste" value="<%=employe.poste%>">
+					<br>
+					Salaire:<br>
+					<input type="number" name="salaire" value="<%=employe.salaire%>">
+					<br>
+					Date entrée:<br>
+					<input type="text"  name="entree" value="<%=employe.entree%>"> 
+					<br>
+					Date de sortie:<br>
+					<input type="text" name="sortie" value="<%=employe.sortie%>">
+					<br>
+					Mail:<br>
+					<input type="email" name="mail" value="<%=employe.mail%>">
+					<input type="hidden" name="motif" value="">
+					<br><br>
+					<button type="submit">Save</button>
+					<button type="button" onClick="location.href='/collaborateurs'">Retour</button>
+				</form>
+			</header>
+			<nav id="bt-menu" class="bt-menu">
+				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+				<ul>
+					<li><a href="/collaborateurs">Liste</a></li>
+					<li><a href="/collaborateurs/new">Ajouter</a></li>
+					<li><a href="/statistiques">Statistiques</a></li>
+					<li><a href="/accueil.html">About us</a></li>
+				</ul>
+				<ul>
+					<li><a href="http://www.twitter.com/codrops" class="bt-icon icon-twitter">Twitter</a></li>
+					<li><a href="https://plus.google.com/101095823814290637419" class="bt-icon icon-gplus">Google+</a></li>
+					<li><a href="https://www.facebook.com/groups/marchombre/" class="bt-icon icon-facebook">Facebook</a></li>
+					<li><a href="https://github.com/codrops" class="bt-icon icon-github">icon-github</a></li>
+				</ul>
+			</nav>
+		</div><!-- /container -->
+	</body>
+	<script src="/js/classie.js"></script>
+	<script src="/js/borderMenu.js"></script>
+</html>
